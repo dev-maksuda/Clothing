@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXORA — Define Your Style</title>
+    <meta name="description" content="LUXORA — Premium fashion for modern living. Discover timeless pieces designed for you.">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===== Page Loader ===== -->
+    <div id="page-loader" class="page-loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- ===== Back to Top Button ===== -->
+    <a href="#home" id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="bi bi-arrow-up"></i>
+    </a>
+
+    <!-- ===== Toast Notification ===== -->
+    <div class="toast-notification" id="toast-notification">
+        <div class="toast-content d-flex align-items-center gap-2">
+            <i class="bi bi-check2-circle toast-icon"></i>
+            <span id="toast-message">Added to bag!</span>
+        </div>
+    </div>
+
+    <!-- ===== 1. Navbar / Header ===== -->
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <span class="brand-text">LUXORA</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#new-arrivals">New Arrivals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#categories">Collections</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="nav-icons d-flex align-items-center gap-3">
+                    <button class="nav-icon-btn" aria-label="Search">
+                        <i class="bi bi-search"></i>
+                    </button>
+                    <button class="nav-icon-btn cart-icon-btn" aria-label="Shopping Bag">
+                        <i class="bi bi-bag"></i>
+                        <span class="cart-badge" id="cart-badge">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== 2. Hero Section ===== -->
+    <section id="home" class="hero-section">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1920&q=80"
+                 alt="Fashion Hero" class="hero-img">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="container">
+                <div class="row align-items-center min-vh-100">
+                    <div class="col-lg-8 col-xl-7">
+                        <span class="hero-label hero-animate">NEW SEASON 2026</span>
+                        <h1 class="hero-heading hero-animate">Define Your<br><span class="accent-text">Style</span></h1>
+                        <p class="hero-description hero-animate">
+                            Elevate your wardrobe with timeless pieces crafted for the modern individual.
+                            Discover elegance, comfort, and confidence in every stitch.
+                        </p>
+                        <div class="hero-buttons d-flex flex-wrap gap-3 hero-animate">
+                            <a href="#new-arrivals" class="btn btn-primary btn-lg">Shop Collection</a>
+                            <a href="#categories" class="btn btn-outline-light btn-lg">Explore More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#categories" class="scroll-indicator" aria-label="Scroll down">
+            <span></span>
+        </a>
+    </section>
+
+    <!-- ===== 3. Featured Categories ===== -->
+    <section id="categories" class="section py-5 py-lg-6 categories-section">
+        <div class="container">
+            <div class="section-header text-center mb-5 reveal">
+                <span class="section-label">EXPLORE</span>
+                <h2 class="section-heading">Shop By Category</h2>
+                <p class="section-subheading">Curated collections for every moment of your life</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3 reveal">
+                    <div class="category-card">
+                        <div class="category-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80"
+                                 alt="Women's Wear" class="category-img">
+                            <div class="category-overlay"></div>
+                        </div>
+                        <div class="category-content">
+                            <h3 class="category-name">Women's Wear</h3>
+                            <a href="#new-arrivals" class="category-link">Explore <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 reveal">
+                    <div class="category-card">
+                        <div class="category-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=800&q=80"
+                                 alt="Men's Wear" class="category-img">
+                            <div class="category-overlay"></div>
+                        </div>
+                        <div class="category-content">
+                            <h3 class="category-name">Men's Wear</h3>
+                            <a href="#new-arrivals" class="category-link">Explore <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 reveal">
+                    <div class="category-card">
+                        <div class="category-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=800&q=80"
+                                 alt="Accessories" class="category-img">
+                            <div class="category-overlay"></div>
+                        </div>
+                        <div class="category-content">
+                            <h3 class="category-name">Accessories</h3>
+                            <a href="#new-arrivals" class="category-link">Explore <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 reveal">
+                    <div class="category-card">
+                        <div class="category-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=800&q=80"
+                                 alt="New Collection" class="category-img">
+                            <div class="category-overlay"></div>
+                        </div>
+                        <div class="category-content">
+                            <h3 class="category-name">New Collection</h3>
+                            <a href="#new-arrivals" class="category-link">Explore <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 4. New Arrivals / Products ===== -->
+    <section id="new-arrivals" class="section py-5 py-lg-6 products-section">
+        <div class="container">
+            <div class="section-header text-center mb-5 reveal">
+                <span class="section-label">JUST LANDED</span>
+                <h2 class="section-heading">New Arrivals</h2>
+                <p class="section-subheading">Fresh from the atelier — our latest drops</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Product 1 -->
+                <div class="col-sm-6 col-lg-4 reveal">
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80"
+                                 alt="Classic Linen Shirt" class="product-img">
+                            <span class="product-badge badge-new">NEW</span>
+                            <button class="wishlist-btn" data-product="Classic Linen Shirt" aria-label="Add to wishlist">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <div class="product-actions">
+                                <button class="btn btn-dark add-to-bag" data-product="Classic Linen Shirt" data-price="89.00">
+                                    <i class="bi bi-bag-plus me-2"></i>Add to Bag
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Shirts</span>
+                            <h3 class="product-name">Classic Linen Shirt</h3>
+                            <div class="product-price">
+                                <span class="price-current">$89.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="col-sm-6 col-lg-4 reveal">
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=600&q=80"
+                                 alt="Oversized Blazer" class="product-img">
+                            <span class="product-badge badge-new">NEW</span>
+                            <button class="wishlist-btn" data-product="Oversized Blazer" aria-label="Add to wishlist">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <div class="product-actions">
+                                <button class="btn btn-dark add-to-bag" data-product="Oversized Blazer" data-price="189.00">
+                                    <i class="bi bi-bag-plus me-2"></i>Add to Bag
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Outerwear</span>
+                            <h3 class="product-name">Oversized Blazer</h3>
+                            <div class="product-price">
+                                <span class="price-current">$189.00</span>
+                                <span class="price-old">$240.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="col-sm-6 col-lg-4 reveal">
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=600&q=80"
+                                 alt="Minimal Cotton Dress" class="product-img">
+                            <span class="product-badge badge-new">NEW</span>
+                            <button class="wishlist-btn" data-product="Minimal Cotton Dress" aria-label="Add to wishlist">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <div class="product-actions">
+                                <button class="btn btn-dark add-to-bag" data-product="Minimal Cotton Dress" data-price="129.00">
+                                    <i class="bi bi-bag-plus me-2"></i>Add to Bag
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Dresses</span>
+                            <h3 class="product-name">Minimal Cotton Dress</h3>
+                            <div class="product-price">
+                                <span class="price-current">$129.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="col-sm-6 col-lg-4 reveal">
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=600&q=80"
+                                 alt="Premium Denim Jacket" class="product-img">
+                            <span class="product-badge badge-sale">SALE</span>
+                            <button class="wishlist-btn" data-product="Premium Denim Jacket" aria-label="Add to wishlist">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <div class="product-actions">
+                                <button class="btn btn-dark add-to-bag" data-product="Premium Denim Jacket" data-price="149.00">
+                                    <i class="bi bi-bag-plus me-2"></i>Add to Bag
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Jackets</span>
+                            <h3 class="product-name">Premium Denim Jacket</h3>
+                            <div class="product-price">
+                                <span class="price-current">$149.00</span>
+                                <span class="price-old">$199.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="col-sm-6 col-lg-4 reveal">
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80"
+                                 alt="Essential T-Shirt" class="product-img">
+                            <button class="wishlist-btn" data-product="Essential T-Shirt" aria-label="Add to wishlist">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <div class="product-actions">
+                                <button class="btn btn-dark add-to-bag" data-product="Essential T-Shirt" data-price="45.00">
+                                    <i class="bi bi-bag-plus me-2"></i>Add to Bag
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">T-Shirts</span>
+                            <h3 class="product-name">Essential T-Shirt</h3>
+                            <div class="product-price">
+                                <span class="price-current">$45.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="col-sm-6 col-lg-4 reveal">
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=600&q=80"
+                                 alt="Casual Wide Leg Pants" class="product-img">
+                            <span class="product-badge badge-new">NEW</span>
+                            <button class="wishlist-btn" data-product="Casual Wide Leg Pants" aria-label="Add to wishlist">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <div class="product-actions">
+                                <button class="btn btn-dark add-to-bag" data-product="Casual Wide Leg Pants" data-price="99.00">
+                                    <i class="bi bi-bag-plus me-2"></i>Add to Bag
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Pants</span>
+                            <h3 class="product-name">Casual Wide Leg Pants</h3>
+                            <div class="product-price">
+                                <span class="price-current">$99.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 5. Promotional Banner ===== -->
+    <section class="promo-banner section py-5 py-lg-7">
+        <div class="promo-bg">
+            <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1920&q=80"
+                 alt="Promotional Banner" class="promo-img">
+            <div class="promo-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8 col-xl-7 reveal">
+                    <h2 class="promo-heading">Elevate Your Everyday Style</h2>
+                    <p class="promo-description">
+                        Discover timeless pieces designed for modern living.
+                        Effortless sophistication that takes you from day to evening.
+                    </p>
+                    <a href="#new-arrivals" class="btn btn-primary btn-lg btn-outline-promo">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 6. About / Brand Story ===== -->
+    <section id="about" class="section py-5 py-lg-6 about-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 reveal">
+                    <div class="about-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?auto=format&fit=crop&w=900&q=80"
+                             alt="About LUXORA" class="about-img">
+                        <div class="about-img-accent"></div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 reveal">
+                    <span class="section-label">OUR STORY</span>
+                    <h2 class="section-heading text-start mb-4">Fashion Made For You</h2>
+                    <p class="about-text">
+                        Founded on the belief that style should be effortless yet intentional, LUXORA brings
+                        together timeless silhouettes with contemporary flair. Each piece is thoughtfully
+                        designed to become a cherished addition to your wardrobe.
+                    </p>
+                    <p class="about-text mb-5">
+                        We celebrate craftsmanship, sustainability, and the art of slow fashion. From the
+                        selection of premium fabrics to the final stitch, we ensure every garment meets our
+                        uncompromising standards of quality.
+                    </p>
+
+                    <div class="row g-4 mb-5">
+                        <div class="col-4">
+                            <div class="stat-item">
+                                <div class="stat-number">10K+</div>
+                                <div class="stat-label">Happy Customers</div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="stat-item">
+                                <div class="stat-number">50+</div>
+                                <div class="stat-label">New Designs</div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="stat-item">
+                                <div class="stat-number">4.9<span class="stat-small">/5</span></div>
+                                <div class="stat-label">Customer Rating</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="btn btn-dark btn-lg">Discover Our Story</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 7. Contact + Footer ===== -->
+    <section id="contact" class="section py-5 py-lg-6 contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center mb-5 reveal">
+                        <span class="section-label">GET IN TOUCH</span>
+                        <h2 class="section-heading">Let's Stay Connected</h2>
+                        <p class="section-subheading">
+                            Subscribe to our newsletter for exclusive offers, style tips, and early access to new arrivals.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row g-5 mb-5">
+                    <div class="col-md-6 col-lg-3 reveal">
+                        <div class="contact-item text-center">
+                            <div class="contact-icon"><i class="bi bi-envelope"></i></div>
+                            <h4 class="contact-title">Email</h4>
+                            <p class="contact-text">hello@luxora.com</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 reveal">
+                        <div class="contact-item text-center">
+                            <div class="contact-icon"><i class="bi bi-telephone"></i></div>
+                            <h4 class="contact-title">Phone</h4>
+                            <p class="contact-text">+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 reveal">
+                        <div class="contact-item text-center">
+                            <div class="contact-icon"><i class="bi bi-geo-alt"></i></div>
+                            <h4 class="contact-title">Location</h4>
+                            <p class="contact-text">New York, NY</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 reveal">
+                        <div class="contact-item text-center">
+                            <div class="contact-icon"><i class="bi bi-clock"></i></div>
+                            <h4 class="contact-title">Hours</h4>
+                            <p class="contact-text">Mon - Sat, 9am - 6pm</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="row justify-content-center reveal">
+                    <div class="col-lg-8 col-xl-6">
+                        <form id="newsletter-form" class="newsletter-form">
+                            <div class="input-group">
+                                <input type="email" id="newsletter-email" class="form-control"
+                                       placeholder="Enter your email address" aria-label="Email address" required>
+                                <button type="submit" class="btn btn-primary">
+                                    Subscribe <i class="bi bi-send ms-2"></i>
+                                </button>
+                            </div>
+                            <div id="newsletter-message" class="newsletter-message"></div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Social Icons -->
+                <div class="row justify-content-center mt-5 reveal">
+                    <div class="col-auto">
+                        <div class="social-icons d-flex gap-3">
+                            <a href="#" class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="social-icon" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="social-icon" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+                            <a href="#" class="social-icon" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-5 mb-5">
+                <div class="col-lg-4">
+                    <div class="footer-brand">
+                        <span class="brand-text">LUXORA</span>
+                        <p class="footer-about">
+                            Crafting timeless fashion for the modern individual. Discover elegance,
+                            quality, and style in every piece.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#new-arrivals">New Arrivals</a></li>
+                        <li><a href="#categories">Collections</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                    <h5 class="footer-heading">Customer Care</h5>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom text-center">
+                <p class="copyright">&copy; 2026 LUXORA. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
